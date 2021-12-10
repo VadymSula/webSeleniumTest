@@ -1,0 +1,60 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Web Selenium Test">
+    <test name="More">
+        <classes>
+            <class name="tests.more.TradeInTest"/>
+            <class name="tests.more.BonusAccountTest"/>
+            <class name="tests.more.HelpCenterTest">
+                <parameter name="inputPhrase" value="Покупка"/>
+            </class>
+            <class name="tests.more.VacanciesTest"/>
+        </classes>
+    </test>
+
+    <test name="Travel">
+        <classes>
+            <class name="tests.more.travel.TravelCurrencyTest"/>
+            <class name="tests.more.travel.TravelSearchingTest"/>
+        </classes>
+    </test>
+
+    <test name="Compares">
+        <classes>
+            <class name="tests.purchase.compares.AddingMoreProductTest"/>
+            <class name="tests.purchase.compares.ComparesCodesOfProductsTest"/>
+            <class name="tests.purchase.compares.ComparesTest"/>
+            <class name="tests.purchase.compares.DeleteFromCompareListTest"/>
+        </classes>
+    </test>
+
+    <test name="Filters">
+        <classes>
+            <class name="tests.purchase.filters.ReadyForDispatchTest"/>
+            <class name="tests.purchase.filters.SortItemsTest"/>
+            <class name="tests.purchase.filters.UnavailableItemsTest"/>
+        </classes>
+    </test>
+
+    <test name="Personal Cabinet">
+        <classes>
+            <class name="tests.personalCabinet.CheckOnValidEmailTest"/>
+        </classes>
+    </test>
+
+    <test name="Purchase">
+        <classes>
+            <class name="tests.purchase.BadQuantityItemsTest"/>
+            <class name="tests.purchase.ChoosingCategoryTest"/>
+            <class name="tests.purchase.PurchasePriceLimitsTest">
+                <parameter name="maxPrice" value="13000"/>
+                <parameter name="minPrice" value="12000"/>
+            </class>
+            <class name="tests.purchase.PurchaseTest"/>
+            <class name="tests.purchase.SearchBadProductTest">
+                <parameter name="searchPhrase" value="###"/>
+            </class>
+            <class name="tests.purchase.SubscribePremiumTest"/>
+        </classes>
+    </test>
+</suite>
